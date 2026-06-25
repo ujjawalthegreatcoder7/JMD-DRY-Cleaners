@@ -3,6 +3,7 @@ import "./Gallery.css";
 
 import modiji from "../assets/chair.png";
 import akshay from "../assets/carseat.png";
+import ambani from "../assets/cushions.png";
 
 export default function Gallery() {
   const galleryImages = [modiji, akshay, ambani, modiji, akshay, ambani];
