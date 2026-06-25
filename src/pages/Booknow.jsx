@@ -36,12 +36,12 @@ export default function BookNow() {
     setLoading(true);
 
     try {
-      await axios.post(
-        "http://localhost:5000/book-now",
-        formData
-      );
+await axios.post(
+  "https://jmd-dry-cleaners-backend.onrender.com/book-now", 
+  formData
+);
 
-      setFormData({
+setFormData({
         name: "",
         phone: "",
         email: "",
