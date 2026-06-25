@@ -32,42 +32,54 @@ export default function BookNow() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
 
     try {
-await axios.post(
-  "https://jmd-dry-cleaners-backend.onrender.com/book-now", 
-  formData
-);
+      const response = await axios.post("https://api.web3forms.com/submit", {
+        access_key: "9a6c02b8-d0cf-425c-98ed-8ccb0912afa9",
+        subject: "New Dry Cleaning Booking",
+        from_name: "JMD Dry Cleaners Website",
 
-setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        sofas: "",
-        date: "",
-        time: "",
-        specialRequest: "",
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        address: formData.address,
+        sofas: formData.sofas,
+        date: formData.date,
+        time: formData.time,
+        specialRequest: formData.specialRequest,
       });
 
-      alert("Booking Sent Successfully ✅");
+      if (response.data.success) {
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          address: "",
+          sofas: "",
+          date: "",
+          time: "",
+          specialRequest: "",
+        });
 
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 1000);
+        alert("Booking Sent Successfully ✅");
 
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      } else {
+        alert("Failed to send booking ❌");
+      }
     } catch (error) {
       console.log(error);
       alert("Failed to send booking ❌");
+    } finally {
       setLoading(false);
     }
   };
 
   return (
     <div className="booking-container">
-
       {loading && (
         <div className="loading-overlay">
           <div className="loading-box">
@@ -81,14 +93,9 @@ setFormData({
       <div className="booking-card">
         <h2>Book Your Service</h2>
 
-        <p>
-          Fill in your details and we will contact you shortly.
-        </p>
+        <p>Fill in your details and we will contact you shortly.</p>
 
-        <form
-          className="booking-form"
-          onSubmit={handleSubmit}
-        >
+        <form className="booking-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
