@@ -12,23 +12,35 @@ export default function BookNow() {
     });
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    address: "",
-    sofas: "",
-    date: "",
-    time: "",
-    specialRequest: "",
-  });
+const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  email: "",
+  address: "",
+  service: [],
+  date: "",
+  time: "",
+  specialRequest: "",
+});
+const handleChange = (e) => {
+  const { name, value, options } = e.target;
 
-  const handleChange = (e) => {
+  if (name === "service") {
+    const selectedServices = Array.from(options)
+      .filter(option => option.selected)
+      .map(option => option.value);
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      service: selectedServices,
     });
-  };
+  } else {
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +56,7 @@ export default function BookNow() {
         phone: formData.phone,
         email: formData.email,
         address: formData.address,
-        sofas: formData.sofas,
+        service: formData.service,
         date: formData.date,
         time: formData.time,
         specialRequest: formData.specialRequest,
@@ -56,7 +68,8 @@ export default function BookNow() {
           phone: "",
           email: "",
           address: "",
-          sofas: "",
+          // sofas: "",
+          service: formData.service.join(", "),
           date: "",
           time: "",
           specialRequest: "",
@@ -132,15 +145,38 @@ export default function BookNow() {
             required
           />
 
-          <input
-            type="number"
-            name="sofas"
-            placeholder="Number of Sofas"
-            min="1"
-            value={formData.sofas}
-            onChange={handleChange}
-            required
-          />
+<div className="select-wrapper">
+  <label className="label">🧹 Select Services</label>
+
+  <select
+    name="service"
+    value={formData.service}
+    onChange={handleChange}
+    multiple
+    required
+  >
+    <optgroup label="🛋️ Home Cleaning">
+      <option value="Sofa Dry Cleaning">Sofa Dry Cleaning</option>
+      <option value="Mattress Dry Cleaning">Mattress Dry Cleaning</option>
+      <option value="Recliner Sofa Dry Cleaning">Recliner Sofa Dry Cleaning</option>
+    </optgroup>
+
+    <optgroup label="🪑 Chair Cleaning">
+      <option value="Dining Chairs Dry Cleaning">Dining Chairs Dry Cleaning</option>
+      <option value="Office Chairs Dry Cleaning">Office Chairs Dry Cleaning</option>
+    </optgroup>
+
+    <optgroup label="🚗 Vehicle Cleaning">
+      <option value="Car Dry Cleaning">Car Dry Cleaning</option>
+    </optgroup>
+  </select>
+
+  <small style={{ color: "#666" }}>
+    Hold <b>Ctrl</b> (Windows) or <b>⌘ Command</b> (Mac) to select multiple services.
+  </small>
+</div>
+
+
 <label htmlFor="date"  className="label">📅 Select Date</label>
 <input
   id="date"

@@ -161,3 +161,36 @@
   font-weight:600;
   color:#ffffff;
 }
+
+.select-wrapper {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-wrapper select:hover {
+  border-color: #444;
+}
+
+.select-wrapper select:focus {
+  border-color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.select-wrapper option {
+  background: #fff;
+  color: #000;
+}
