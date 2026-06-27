@@ -141,27 +141,25 @@ export default function BookNow() {
             onChange={handleChange}
             required
           />
-<div className="input-group">
-  <label>Select Date</label>
-  <input
-    type="date"
-    name="date"
-    value={formData.date}
-    onChange={handleChange}
-    required
-  />
-</div>
+<label htmlFor="date"  className="label">📅 Select Date</label>
+<input
+  id="date"
+  type="date"
+  name="date"
+  value={formData.date}
+  onChange={handleChange}
+  required
+/>
 
-<div className="input-group">
-  <label>Select Time</label>
-  <input
-    type="time"
-    name="time"
-    value={formData.time}
-    onChange={handleChange}
-    required
-  />
-</div>
+<label htmlFor="time" className="label">🕒 Select Time</label>
+<input
+  id="time"
+  type="time"
+  name="time"
+  value={formData.time}
+  onChange={handleChange}
+  required
+/>
           <textarea
             rows="4"
             name="specialRequest"
