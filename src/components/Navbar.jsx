@@ -53,7 +53,7 @@ export default function Navbar() {
 </div>
             {/* WHATSAPP / CONTACT */}
             <a
-                href="https://wa.me/918587802572"
+                href="https://wa.me/919319354648"
                 target="_blank"
                 rel="noreferrer"
                 className="whatsapp-btn"

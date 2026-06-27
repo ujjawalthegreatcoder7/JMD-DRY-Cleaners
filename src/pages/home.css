@@ -300,7 +300,6 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
   gap: 30px;
   padding: 40px;
-
   justify-content: center;
   align-content: center;
   justify-items: center;
@@ -385,7 +384,9 @@
   overflow: hidden;
   backface-visibility: hidden;
 }
-
+.imagedryclenaing{
+  height: 10rem !important;
+}
 /* FRONT IMAGE */
 .flip-front img,
 .flip-back img {
@@ -565,4 +566,28 @@
   /* transition-delay: 0.25s; */
 
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+.service-name {
+  margin-top: 11rem !important;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;   /* Blue */
+  font-family: "Poppins", sans-serif;
+}
+
+.flip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.service-title h3 {
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: 600;
 }

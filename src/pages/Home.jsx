@@ -10,6 +10,8 @@ import matteresis from "../assets/matteresis.png";
 import cushions from "../assets/cushions.png";
 import chair from "../assets/chair.png";
 import carseat from "../assets/carseat.png";
+import recliner from "../assets/recliner.webp";
+import reclinercleaned from "../assets/reclinercleaned.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -53,7 +55,7 @@ export default function Home() {
 
 
             <a
-              href="https://wa.me/918587802572"
+              href="https://wa.me/919319354648"
               target="_blank"
               rel="noreferrer"
               className="btn secondary"
@@ -87,107 +89,113 @@ export default function Home() {
 
       {/* SERVICES PREVIEW */}
 <section className="services-section">
-<div className="orserv" >
-  <h2 className="services-title">Our Services</h2>
-</div>
+  <div className="orserv">
+    <h2 className="services-title">Our Services</h2>
+  </div>
+
   <div className="service-grid">
 
     {/* 1 */}
     <div className="flip-card">
       <div className="flip-inner">
-
-        <div className="flip-front">
-          <img src={officesofa} alt="Dry Cleaning" />
+        <div className="flip-front imagedryclenaing">
+          <img src={officesofa} alt="Office Sofa Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={sofacleaned} alt="back" />
-    </div>
-        {/* <div className="flip-back"><h3>Dry Cleaning</h3></div> */}
 
-
+        <div className="flip-back imagedryclenaing">
+          <img src={sofacleaned} alt="Office Sofa Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Office Sofa Dry Cleaning</h3>
     </div>
 
     {/* 2 */}
     <div className="flip-card">
       <div className="flip-inner">
-        <div className="flip-front">
-          <img  src={sofa} alt="Steam Iron" />
+        <div className="flip-front imagedryclenaing">
+          <img src={sofa} alt="Sofa Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={officesofacleaned} alt="back" />
-    </div>
 
-        {/* <div className="flip-back"><h3>Steam Iron</h3></div> */}
+        <div className="flip-back imagedryclenaing">
+          <img src={officesofacleaned} alt="Sofa Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Sofa Dry Cleaning</h3>
     </div>
 
     {/* 3 */}
     <div className="flip-card">
       <div className="flip-inner">
-        <div className="flip-front">
-          <img  src={matteresis} alt="Shoe Cleaning" />
+        <div className="flip-front imagedryclenaing">
+          <img src={matteresis} alt="Mattress Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={matteresiscleaned} alt="back" />
-    </div>
 
-        {/* <div className="flip-back"><h3>Shoe Cleaning</h3></div> */}
+        <div className="flip-back imagedryclenaing" >
+          <img src={matteresiscleaned} alt="Mattress Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Mattress Dry Cleaning</h3>
     </div>
 
     {/* 4 */}
     <div className="flip-card">
       <div className="flip-inner">
-        <div className="flip-front">
-          <img  src={cushions} alt="Laundry Wash" />
+        <div className="flip-front imagedryclenaing">
+          <img src={cushions} alt="Cushion Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={cushionscleaned} alt="back" />
-    </div>
 
-        {/* <div className="flip-back"><h3>Laundry Wash</h3></div> */}
+        <div className="flip-back imagedryclenaing">
+          <img src={cushionscleaned} alt="Cushion Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Cushion Dry Cleaning</h3>
     </div>
 
     {/* 5 */}
     <div className="flip-card">
       <div className="flip-inner">
-        <div className="flip-front">
-          <img  src={chair} alt="Sofa Cleaning" />
+        <div className="flip-front imagedryclenaing">
+          <img className="imagedryclenaing" src={chair} alt="Chair Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={chaircleaned} alt="back" />
-    </div>
 
-        {/* <div className="flip-back"><h3>Sofa Cleaning</h3></div> */}
+        <div className="flip-back imagedryclenaing">
+          <img src={chaircleaned} alt="Chair Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Dining Chair Dry Cleaning</h3>
     </div>
 
     {/* 6 */}
     <div className="flip-card">
       <div className="flip-inner">
-        <div className="flip-front">
-          <img  src={carseat} alt="Carpet Cleaning" />
+        <div className="flip-front imagedryclenaing">
+          <img src={carseat} alt="Car Seat Cleaning" />
         </div>
-    {/* BACK IMAGE */}
-    <div className="flip-back">
-      <img src={carseatcleaned} alt="back" />
-    </div>
 
-        {/* <div className="flip-back"><h3>Carpet Cleaning</h3></div> */}
+        <div className="flip-back imagedryclenaing">
+          <img src={carseatcleaned} alt="Car Seat Cleaned" />
+        </div>
       </div>
+      <h3 className="service-name">Car Seat Dry Cleaning</h3>
     </div>
 
+    {/* 7 */}
+    <div className="flip-card">
+      <div className="flip-inner">
+        <div className="flip-front imagedryclenaing">
+          <img src={recliner} alt="Car Seat Cleaning" />
+        </div>
+
+        <div className="flip-back imagedryclenaing">
+          <img src={reclinercleaned} alt="Car Seat Cleaned" />
+        </div>
+      </div>
+      <h3 className="service-name">Recliner Sofa Dry Cleaning</h3>
+    </div>
 
   </div>
 </section>
-     
+
      <div className="divformanico" >
 
 <h2> How It Works </h2>
