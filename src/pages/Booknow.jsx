@@ -145,37 +145,41 @@ const handleChange = (e) => {
             required
           />
 
-<div className="select-wrapper">
-  <label className="label">🧹 Select Services</label>
+<div className="service-section">
+  <label className="service-label">
+    🧹 Select Services
+  </label>
 
-  <select
-    name="service"
-    value={formData.service}
-    onChange={handleChange}
-    multiple
-    required
-  >
-    <optgroup label="🛋️ Home Cleaning">
-      <option value="Sofa Dry Cleaning">Sofa Dry Cleaning</option>
-      <option value="Mattress Dry Cleaning">Mattress Dry Cleaning</option>
-      <option value="Recliner Sofa Dry Cleaning">Recliner Sofa Dry Cleaning</option>
-    </optgroup>
+  <div className="select-container">
+    <select
+      className="service-select"
+      name="service"
+      value={formData.service}
+      onChange={handleChange}
+      multiple
+      required
+    >
+      <optgroup label="🛋️ Home Cleaning">
+        <option value="Sofa Dry Cleaning">🛋️ Sofa Dry Cleaning</option>
+        <option value="Mattress Dry Cleaning">🛏️ Mattress Dry Cleaning</option>
+        <option value="Recliner Sofa Dry Cleaning">🪑 Recliner Sofa Dry Cleaning</option>
+      </optgroup>
 
-    <optgroup label="🪑 Chair Cleaning">
-      <option value="Dining Chairs Dry Cleaning">Dining Chairs Dry Cleaning</option>
-      <option value="Office Chairs Dry Cleaning">Office Chairs Dry Cleaning</option>
-    </optgroup>
+      <optgroup label="🪑 Chair Cleaning">
+        <option value="Dining Chairs Dry Cleaning">🍽️ Dining Chairs Dry Cleaning</option>
+        <option value="Office Chairs Dry Cleaning">💼 Office Chairs Dry Cleaning</option>
+      </optgroup>
 
-    <optgroup label="🚗 Vehicle Cleaning">
-      <option value="Car Dry Cleaning">Car Dry Cleaning</option>
-    </optgroup>
-  </select>
+      <optgroup label="🚗 Vehicle Cleaning">
+        <option value="Car Dry Cleaning">🚗 Car Dry Cleaning</option>
+      </optgroup>
+    </select>
+  </div>
 
-  <small style={{ color: "#666" }}>
-    Hold <b>Ctrl</b> (Windows) or <b>⌘ Command</b> (Mac) to select multiple services.
-  </small>
+  <p className="service-note">
+    💡 Hold <b>Ctrl</b> (Windows) or <b>⌘ Command</b> (Mac) to select multiple services.
+  </p>
 </div>
-
 
 <label htmlFor="date"  className="label">📅 Select Date</label>
 <input
