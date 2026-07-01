@@ -196,6 +196,74 @@ export default function Home() {
   </div>
 </section>
 
+<section class="why-us">
+    <div class="container">
+
+        <h2>Why Choose JMD Dry Cleaners?</h2>
+        <p class="subtitle">
+            Professional Dry Cleaning & Home Cleaning Services with
+            Quality, Trust & Customer Satisfaction.
+        </p>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Trained & Verified Professionals</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Eco-Friendly Cleaning Solutions</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Safe for Kids & Pets</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Advanced Dry Cleaning Machines</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Quick Drying (2–6 Hours)</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Doorstep Service</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Affordable Pricing</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>100% Customer Satisfaction</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Same-Day Service Available</h3>
+            </div>
+
+            <div class="feature-card">
+                <span>✔</span>
+                <h3>Free Inspection & Quote</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
      <div className="divformanico" >
 
 <h2> How It Works </h2>
